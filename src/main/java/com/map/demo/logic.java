@@ -23,15 +23,20 @@ public class logic {
     private static JSONArray array;
     private static ArrayList list;
 
-    private MapCalci map;
+//    private MapCalci map;
 
+    /*
+        Info class has private variable which store api key
+        and api key should be hidden :)
+        so make an java class and initial and set a getter to get the api key
+     */
     @Autowired
     private Info info;
 
-    @Autowired
-    public logic(MapCalci map) {
-        this.map = map;
-    }
+//    @Autowired
+//    public logic(MapCalci map) {
+//        this.map = map;
+//    }
 
     @GetMapping("/")
     public String getHome(){
