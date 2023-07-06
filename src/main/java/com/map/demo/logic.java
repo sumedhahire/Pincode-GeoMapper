@@ -22,7 +22,7 @@ public class logic {
 
     private static JSONArray array;
     private static ArrayList list;
-    
+
 
     /*
         Info class has private variable which store api key
@@ -78,6 +78,12 @@ public class logic {
 //        return new ModelAndView("input");
 //    }
 
+
+    /*
+        This method gets data from api response(json),
+        we send request api using pincode(we need to authorize our self)
+        and we get Json in response we double down to office and get latitude and longitude
+     */
     public JSONArray mapCalci(String pin,ArrayList<String> list) throws IOException, InterruptedException, URISyntaxException {
 
         //ArrayList<String> list=new ArrayList<>();
