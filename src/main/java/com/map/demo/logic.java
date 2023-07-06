@@ -22,8 +22,7 @@ public class logic {
 
     private static JSONArray array;
     private static ArrayList list;
-
-//    private MapCalci map;
+    
 
     /*
         Info class has private variable which store api key
@@ -33,10 +32,6 @@ public class logic {
     @Autowired
     private Info info;
 
-//    @Autowired
-//    public logic(MapCalci map) {
-//        this.map = map;
-//    }
 
     @GetMapping("/")
     public String getHome(){
