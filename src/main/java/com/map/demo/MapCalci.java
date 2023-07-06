@@ -2,6 +2,7 @@ package com.map.demo;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.io.IOException;
@@ -13,6 +14,8 @@ import java.net.http.HttpResponse;
 
 @Service
 public class MapCalci {
+    @Autowired
+    Info info;
     private String pincode;
 
     private String office;
@@ -30,7 +33,7 @@ public class MapCalci {
 
     public double[] mapCalci(String pin) throws IOException, InterruptedException, URISyntaxException {
         HttpRequest get = HttpRequest.newBuilder()
-                .uri(new URI("https://api.data.gov.in/resource/5c2f62fe-5afa-4119-a499-fec9d604d5bd?api-key=579b464db66ec23bdd000001cdd3946e44ce4aad7209ff7b23ac571b&format=json&filters%5Bpincode%5D=" + pin))
+                .uri(new URI("https://api.data.gov.in/resource/5c2f62fe-5afa-4119-a499-fec9d604d5bd?api-key="+info.getApi()+"&format=json&filters%5Bpincode%5D=" + pin))
                 .GET()
                 .build();
 
